@@ -1,0 +1,36 @@
+<?php
+$collection = $this->getPostsCollection();
+?>
+
+
+
+<body>
+
+<div class="header">
+    <h1>Blog</h1>
+
+</div>
+
+<?php foreach ($collection as $key => $data): ?>
+
+<div class="row">
+
+    <div class="main">
+        <h2><?php echo $data->getTitle(); ?></h2>
+        <h5><?php echo $data->getCreatedAt(); ?></h5>
+        <h3><?php echo $data->getAuthor(); ?></h3>
+        <p><?php echo $data->getContent(); ?></p>
+
+        <a href="<?php echo $block->getBaseUrl().'posts/index/view/id/'.$data->getBlogId(); ?>">
+            <span>Go to post</span>
+            </a>
+
+        <br>
+    </div>
+</div>
+<?php endforeach; ?>
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+
+</body>

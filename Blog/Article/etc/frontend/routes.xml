@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route frontName="add" id="add">
+            <module name="Blog_Article"/>
+        </route>
+
+        <route frontName="posts" id="posts">
+            <module name="Blog_Article"/>
+        </route>
+    </router>
+</config>
